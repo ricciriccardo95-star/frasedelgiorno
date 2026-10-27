@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carica del Giorno</title>
+  <meta name="description" content="Una frase motivazionale sportiva al giorno. Un solo tocco, 365 frasi.">
+  <meta name="theme-color" content="#020204">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <div class="grid"></div>
+  </div>
+
+  <main class="app">
+    <header>
+      <p class="eyebrow">Carica del giorno</p>
+      <h1 id="data">—</h1>
+    </header>
+
+    <section class="stage">
+      <button id="btn" class="orb" aria-live="polite">
+        <span class="ring r1"></span>
+        <span class="ring r2"></span>
+        <span class="core">
+          <span id="btnLabel" class="label">TOCCA</span>
+        </span>
+      </button>
+      <p id="hint" class="hint">Una frase al giorno. Tocca per scoprire la tua.</p>
+    </section>
+
+    <section id="card" class="card" hidden>
+      <p id="num" class="num"></p>
+      <blockquote id="frase"></blockquote>
+    </section>
+
+    <footer>
+      <div class="stat"><strong id="streak">0</strong><span>giorni di fila</span></div>
+      <div class="stat"><strong id="total">0</strong><span>frasi scoperte</span></div>
+      <div class="stat"><strong id="countdown">--:--:--</strong><span>alla prossima</span></div>
+    </footer>
+  </main>
+
+  <div id="burst" class="burst" aria-hidden="true"></div>
+
+  <script src="frasi.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
